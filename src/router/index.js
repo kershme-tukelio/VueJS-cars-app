@@ -8,7 +8,10 @@ const routes = [
 	{
 		path: '/',
 		redirect: '/cars',
-		name: 'AppCars',
+	},
+	{
+		path: '/cars',
+		name: 'Cars',
 		component: AppCars
 	}
 ]
