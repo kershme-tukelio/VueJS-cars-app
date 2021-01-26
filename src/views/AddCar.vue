@@ -63,13 +63,13 @@ export default {
     },
     preview() {
       alert(
-        [this.formData.brand, 
-        this.formData.model, 
-        this.formData.year, 
-        this.formData.numberOfDoors, 
-        this.formData.maxSpeed, 
-        this.formData.isAutomatic, 
-        this.formData.engine,] 
+        'Brand: ' + this.formData.brand + '\n' +
+        'Model: ' + this.formData.model + '\n' +
+        'Year: ' + this.formData.year + '\n' +
+        'Number 0f doors: ' + this.formData.numberOfDoors + '\n' +
+        'Max speed: ' + this.formData.maxSpeed + '\n' +
+        'Automatic: ' + this.formData.isAutomatic + '\n' +
+        'Engine: ' + this.formData.engine
       )
     }
   },
