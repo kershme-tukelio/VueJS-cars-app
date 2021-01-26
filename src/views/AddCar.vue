@@ -24,11 +24,11 @@
       <input min=0 v-model="formData.maxSpeed" type="number" class="form-number-input" id="max-speed">
     </div>
     <div class="mb-3 form-check">
-      <label class="form-label" for="doors">Number Of Doors </label>
-      <input required min=0 v-model="formData.numberOfDoors" type="number" class="form-number-input" id="doors">
+      <label class="form-label" for="number-of-doors">Number Of Doors </label>
+      <input required min=0 v-model="formData.numberOfDoors" type="number" class="form-number-input" id="number-of-doors">
     </div>
     <div class="mb-3 form-check">
-      <label class="form-label" for="doors">Automatic </label>
+      <label class="form-label" for="is-automatic">Automatic </label>
       <input min=0 v-model="formData.isAutomatic" type="checkbox" class="form-check-label" id="is-automatic">
     </div>
 
@@ -94,6 +94,9 @@ export default {
       }
       return years;
     }
+  },
+  created() {
+    
   }
 }
 </script>

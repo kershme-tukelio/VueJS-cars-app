@@ -23,6 +23,7 @@
                 <td>{{car.isAutomatic}}</td>
                 <td>{{car.engine}}</td>
                 <td>{{car.numberOfDoors}}</td>
+                <td><button @click="deleteCar(car)" >Delete</button></td>
             </tr>
         </tbody>
         </table>
@@ -33,6 +34,13 @@
 import carService from '../services/CarService';
 
 export default {
+    methods: {
+        async deleteCar(car) {
+            await carService.delete(car.id);
+            this.cars = this.cars.filter((c) => c.id !== car.id)
+            console.log('CAR DELETED');
+        }
+    },
     data(){
         return {
             cars: []

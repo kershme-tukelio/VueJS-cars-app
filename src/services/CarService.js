@@ -10,8 +10,12 @@ class CarService {
         }
         
     }
-    add(newCar) {
-        return http.post('cars', newCar)
+    async add(newCar) {
+        const response = await http.post('cars', newCar);
+        return response.data;
+    }
+    delete(carId) {
+        return http.delete(`/cars/${carId}`);
     }
 }
 const carService = new CarService();
