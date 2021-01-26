@@ -21,7 +21,7 @@
 
     <div class="mb-3 form-check">
       <label class="form-label" for="max-speed">Max Speed </label>
-      <input required min=0 v-model="formData.maxSpeed" type="number" class="form-number-input" id="max-speed">
+      <input min=0 v-model="formData.maxSpeed" type="number" class="form-number-input" id="max-speed">
     </div>
     <div class="mb-3 form-check">
       <label class="form-label" for="doors">Number Of Doors </label>

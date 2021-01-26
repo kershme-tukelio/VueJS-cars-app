@@ -10,8 +10,8 @@ class CarService {
         }
         
     }
-    add(formData) {
-        return http.post('cars', formData)
+    add(newCar) {
+        return http.post('cars', newCar)
     }
 }
 const carService = new CarService();
