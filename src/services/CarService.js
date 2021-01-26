@@ -10,6 +10,9 @@ class CarService {
         }
         
     }
+    add(formData) {
+        return http.post('cars', formData)
+    }
 }
 const carService = new CarService();
 export default carService;

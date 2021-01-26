@@ -15,14 +15,14 @@
         </thead>
         <tbody>
             <tr v-for="car in cars" :key="car.id">
-							<td>{{car.id}}</td>
-							<td>{{car.brand}}</td>
-							<td>{{car.model}}</td>
-							<td>{{car.year}}</td>
-							<td>{{car.maxSpeed}}</td>
-							<td>{{car.isAutomatic}}</td>
-							<td>{{car.engine}}</td>
-							<td>{{car.numberOfDoors}}</td>
+                <td>{{car.id}}</td>
+                <td>{{car.brand}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.year}}</td>
+                <td>{{car.maxSpeed}}</td>
+                <td>{{car.isAutomatic}}</td>
+                <td>{{car.engine}}</td>
+                <td>{{car.numberOfDoors}}</td>
             </tr>
         </tbody>
         </table>

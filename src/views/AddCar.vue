@@ -20,22 +20,43 @@
     </div>
 
     <div class="mb-3 form-check">
-      <label class="form-label" for="max-speed">Max Speed</label>
+      <label class="form-label" for="max-speed">Max Speed </label>
       <input min=0 v-model="formData.maxSpeed" type="number" class="form-number-input" id="max-speed">
     </div>
     <div class="mb-3 form-check">
-      <label class="form-label" for="doors">Number Of Doors</label>
-      <input min=0 v-model="formData.doors" type="number" class="form-number-input" id="doors">
+      <label class="form-label" for="doors">Number Of Doors </label>
+      <input min=0 v-model="formData.numberOfDoors" type="number" class="form-number-input" id="doors">
     </div>
+    <div class="mb-3 form-check">
+      <label class="form-label" for="doors">Automatic </label>
+      <input min=0 v-model="formData.isAutomatic" type="checkbox" class="form-check-label" id="is-automatic">
+    </div>
+      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+        <label class="btn btn-secondary">
+          <input v-model="formData.engine" type="radio" name="engine" value="diesel" id="diesel" autocomplete="off" checked> Diesel
+        </label>
+        <label class="btn btn-secondary">
+          <input v-model="formData.engine" type="radio" name="engine" value="petrol" id="petrol" autocomplete="off"> Petrol
+        </label>
+        <label class="btn btn-secondary">
+          <input v-model="formData.engine" type="radio" name="engine" value="electric" id="electric" autocomplete="off"> Electric
+        </label>
+        <label class="btn btn-secondary">
+          <input v-model="formData.engine" type="radio" name="engine" value="hybrid" id="hybrid" autocomplete="off"> Hybrid
+        </label>
+      </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </template>
 
 <script>
+import carService from '../services/CarService'
+
 export default {
   methods: {
-    onSubmit(){
-
+    async onSubmit(){
+      await carService.add(this.formData)
+      this.$router.push('/cars');
     }
   },
   data(){
@@ -44,8 +65,10 @@ export default {
         brand: "",
         model: "",
         year: 2020,
-        doors: 0,
-        maxSpeed: 0
+        numberOfDoors: 0,
+        maxSpeed: 0,
+        isAutomatic: false,
+        engine: 'asdf'
       }
     }
   },
