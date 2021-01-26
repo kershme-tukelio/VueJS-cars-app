@@ -31,6 +31,7 @@
       <label class="form-label" for="doors">Automatic </label>
       <input min=0 v-model="formData.isAutomatic" type="checkbox" class="form-check-label" id="is-automatic">
     </div>
+
       <div class="btn-group btn-group-toggle" data-toggle="buttons">
         <label class="btn btn-secondary">
           <input v-model="formData.engine" type="radio" name="engine" value="diesel" id="diesel" autocomplete="off" checked> Diesel
@@ -44,7 +45,8 @@
         <label class="btn btn-secondary">
           <input v-model="formData.engine" type="radio" name="engine" value="hybrid" id="hybrid" autocomplete="off"> Hybrid
         </label>
-      </div>
+      </div><br/><br/>
+    <button type="reset" > Reset form </button><br/><br/>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </template>
