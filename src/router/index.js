@@ -26,4 +26,15 @@ const router = new VueRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  console.log(to, from, next);
+  const token = JSON.parse(localStorage.setItem('token'));
+  console.log(token);
+  next();
+})
+
 export default router
+
+// pablik fanksn kolbek() {
+//   konzol.log(dis.imejl);
+// }

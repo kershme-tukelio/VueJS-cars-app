@@ -1,3 +1,4 @@
+
 import http from './BaseService';
 
 class CarService {
@@ -17,6 +18,16 @@ class CarService {
     delete(carId) {
         return http.delete(`/cars/${carId}`);
     }
+    async getById(carId) {
+        const response = await http.get(`/cars/${carId}`);
+        return response.data;
+    }
+    async update(carId) {
+        const response = await http.get(`/cars/${carId}`);
+        return response.data;
+    }
 }
 const carService = new CarService();
 export default carService;
+
+// , data
